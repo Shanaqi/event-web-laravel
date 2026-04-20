@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-variant": "#e0e3e5",
+                    "surface-container-highest": "#e0e3e5",
+                    "on-tertiary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "surface-dim": "#d8dadc",
+                    "surface-tint": "#4059aa",
+                    "secondary-container": "#8a4cfc",
+                    "on-tertiary-container": "#00bdd6",
+                    "on-secondary-fixed": "#25005a",
+                    "inverse-on-surface": "#eff1f3",
+                    "on-background": "#191c1e",
+                    "surface": "#f7f9fb",
+                    "on-tertiary-fixed-variant": "#004e5a",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed-dim": "#2fd9f4",
+                    "tertiary": "#002f37",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-primary": "#b6c4ff",
+                    "error-container": "#ffdad6",
+                    "secondary-fixed": "#eaddff",
+                    "outline-variant": "#c5c5d3",
+                    "on-primary-fixed-variant": "#264191",
+                    "surface-container-low": "#f2f4f6",
+                    "secondary-fixed-dim": "#d2bbff",
+                    "on-primary-container": "#90a8ff",
+                    "surface-container-low": "#f2f4f6",
+                    "surface-container-high": "#e6e8ea",
+                    "on-secondary-fixed-variant": "#5a00c6",
+                    "on-primary-fixed": "#00164e",
+                    "tertiary-fixed": "#a2eeff",
+                    "surface-bright": "#f7f9fb",
+                    "secondary": "#712ae2",
+                    "primary-fixed-dim": "#b6c4ff",
+                    "tertiary-container": "#004752",
+                    "outline": "#757682",
+                    "on-tertiary-fixed": "#001f25",
+                    "surface-container": "#eceef0",
+                    "on-secondary-container": "#fffbff",
+                    "primary": "#00236f",
+                    "on-error-container": "#93000a",
+                    "on-secondary": "#ffffff",
+                    "primary-container": "#1e3a8a",
+                    "on-surface-variant": "#444651",
+                    "on-error": "#ffffff",
+                    "inverse-surface": "#2d3133",
+                    "background": "#f7f9fb",
+                    "primary-fixed": "#dce1ff",
+                    "on-surface": "#191c1e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "1rem",
+                    "xl": "1.5rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen">
+<!-- TopAppBar -->
+<header class="bg-[#f7f9fb]/80 dark:bg-slate-950/80 backdrop-blur-xl docked full-width top-0 sticky z-50 flex justify-between items-center w-full px-6 h-16 shadow-none">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#1e3a8a] dark:text-[#b6c4ff]" data-icon="venue">place</span>
+<h1 class="text-[#1e3a8a] dark:text-[#ffffff] font-bold text-xl tracking-tight">Layout Manager</h1>
+</div>
+<div class="flex items-center gap-2">
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-[#e6e8ea] dark:hover:bg-slate-800 transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-slate-400" data-icon="search">search</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-[#e6e8ea] dark:hover:bg-slate-800 transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-slate-400" data-icon="notifications">notifications</span>
+</button>
+</div>
+</header>
+<main class="px-4 pt-6 pb-32 space-y-8 max-w-2xl mx-auto">
+<!-- Venue Selector -->
+<section>
+<div class="flex items-center justify-between mb-4">
+<h2 class="text-[10px] uppercase font-bold tracking-[0.05em] text-outline px-1">Selected Venue</h2>
+<button class="text-xs font-semibold text-primary">View All</button>
+</div>
+<div class="bg-surface-container-low rounded-xl p-4 flex items-center justify-between group active:scale-98 transition-transform">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-primary flex items-center justify-center text-white">
+<span class="material-symbols-outlined" data-icon="location_on">location_on</span>
+</div>
+<div>
+<p class="font-bold text-on-surface">Grand Atrium</p>
+<p class="text-xs text-outline">Level 1, Central Plaza</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline" data-icon="expand_more">expand_more</span>
+</div>
+</section>
+<!-- Layout Template Selector -->
+<section>
+<h2 class="text-[10px] uppercase font-bold tracking-[0.05em] text-outline mb-4 px-1">Layout Template</h2>
+<div class="flex gap-4 overflow-x-auto pb-2 -mx-4 px-4 no-scrollbar">
+<!-- Template Card 1 -->
+<button class="flex-shrink-0 w-36 aspect-[3/4] bg-surface-container-lowest rounded-xl p-3 flex flex-col justify-between border-2 border-primary shadow-sm relative">
+<div class="absolute top-2 right-2 w-5 h-5 bg-primary text-white rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px]" data-icon="check" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<div class="w-full h-24 bg-surface-container-high rounded-lg overflow-hidden flex items-center justify-center">
+<img class="w-full h-full object-cover mix-blend-multiply opacity-40" data-alt="blueprint-style architectural floor plan for a large event hall showing booth arrangements and corridors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClnDZHklupXjwf_-84okbdjDMWdXc6QZpSWqbNZofeID9mpfIgAIWmOrxck6jENZ2LSsDTnaSF6AL-FcJSR1QEtNhIGw-sOeuRpFf5JzCluMNMRTiqoJ1StNsyM5JVEe3DwPOTkLnIKxvq3MJuKO_FGr960u0uVCAsXyVGuZWPcUP0aPV5Wy_BfKt8XIblrIxoMde0SPG5vkDmLCDICbIMTj4XM05tShALT8A1_dDphOA1q7gQusm_zVMpuDjwMdtpoP2I6Ki5HqU"/>
+</div>
+<div>
+<p class="font-bold text-sm text-on-surface">Trade Show</p>
+<p class="text-[10px] text-outline">48 Booths</p>
+</div>
+</button>
+<!-- Template Card 2 -->
+<button class="flex-shrink-0 w-36 aspect-[3/4] bg-surface-container-lowest rounded-xl p-3 flex flex-col justify-between border-2 border-transparent hover:border-outline-variant transition-colors">
+<div class="w-full h-24 bg-surface-container-high rounded-lg overflow-hidden flex items-center justify-center">
+<img class="w-full h-full object-cover mix-blend-multiply opacity-20" data-alt="floor plan for a gala dinner event with circular table arrangements and a central stage area" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChRADfKSjN0xRpoG6q5NcfiqevnyWmpTjAue6FBx6Bs2u50BjfCP452NeMdRsHBl0Jo95356Y-wdK56gMYgndwJ5Js6ZollMh9LG5U4JgMCIb-BSMgBasrRJJ8rjQ2fU3gfm-HXZue47ZjPceqon96dbOGY5fXGCC9nOyPBDE79YZVxAn2sXuWRtsVNPC2t03KKyUzPvxZDl4l1XJELxmNQs0gOTfNcpnjDrswTAjePAiK3m4FFuEryzUsHmIkDM0mtN92B_0fiHk"/>
+</div>
+<div>
+<p class="font-bold text-sm text-on-surface">Gala Dinner</p>
+<p class="text-[10px] text-outline">24 Tables</p>
+</div>
+</button>
+<!-- Template Card 3 -->
+<button class="flex-shrink-0 w-36 aspect-[3/4] bg-surface-container-lowest rounded-xl p-3 flex flex-col justify-between border-2 border-transparent hover:border-outline-variant transition-colors">
+<div class="w-full h-24 bg-surface-container-high rounded-lg overflow-hidden flex items-center justify-center">
+<img class="w-full h-full object-cover mix-blend-multiply opacity-20" data-alt="concert seating layout diagram showing stage placement and tiered seating rows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBk5exEm1mj8fhuC2tbFAyTBOs4VSCq3uvCwbFDSWlSfrIGzjC-PfvK5krhblim9oDKucAlo2cNcx0ZfMVgNYtJa3_TTwnGTImoVXGYJCPOyE3Q7910zfFbZBKqNn29Fyl6LlsLSBzHVbxItpZSMwzm6Z3Gbtonkozx93m2HU3OPGuoZB7OkHkuMUQjveUiAqEjBoUMYJmvXvTFzwHlWPVAhCWS28jyNmr3JKUATx_5-6wk7N8pyZ-nfaU2hgZnT-97RogdIvSF-EQ"/>
+</div>
+<div>
+<p class="font-bold text-sm text-on-surface">Live Concert</p>
+<p class="text-[10px] text-outline">500 Seats</p>
+</div>
+</button>
+</div>
+</section>
+<!-- Slot Management List -->
+<section>
+<div class="flex items-center justify-between mb-4 px-1">
+<h2 class="text-[10px] uppercase font-bold tracking-[0.05em] text-outline">Slot Management</h2>
+<div class="flex gap-2">
+<button class="p-1.5 bg-surface-container-high rounded-lg text-primary">
+<span class="material-symbols-outlined text-[20px]" data-icon="filter_list">filter_list</span>
+</button>
+</div>
+</div>
+<div class="space-y-3">
+<!-- Slot Item: Occupied -->
+<div class="bg-surface-container-lowest rounded-xl p-4 flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<div class="flex gap-3">
+<div class="w-10 h-10 bg-secondary-container/10 rounded-lg flex items-center justify-center text-secondary-container">
+<span class="material-symbols-outlined" data-icon="storefront">storefront</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-bold text-lg text-primary">A-101</span>
+<span class="px-2 py-0.5 bg-error-container text-on-error-container text-[10px] font-bold rounded-full uppercase">Occupied</span>
+</div>
+<p class="text-xs text-outline font-medium">Premium Booth • 12sqm</p>
+</div>
+</div>
+<button class="p-2 hover:bg-surface-container-low rounded-full transition-colors">
+<span class="material-symbols-outlined text-outline" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+<div class="bg-surface-container-low rounded-lg p-3 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full overflow-hidden bg-surface-variant">
+<img class="w-full h-full object-cover" data-alt="minimalist logo for an high-end apparel brand" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsScUccOuCZWif8r6tupSFPxaeHIoCmynPoeYnH-sVXkeicVUOPDw5WC6xc4YRzrqQldQH0pR0qwFKrI740mxSxyzyqZq08FxS8vjoafNd6wV1GLgvMOWfOt1jTJJgh1IiLdFBULoexCe2iZjRL0iBCpjCUUzfGS_9r19twxt5U-2o1f6DpuWVT5oBnwdt5v00Y_0KQlFsJBXgPHfD4MvngTvjsqoBves1pRscnbkyl08_Ig_LANoofnZjGaIDsMCVb-pe9WwJwrk"/>
+</div>
+<div>
+<p class="text-[10px] uppercase font-bold text-outline tracking-wider">Assigned Vendor</p>
+<p class="text-sm font-bold text-on-surface">Lumina Apparel Co.</p>
+</div>
+</div>
+<button class="text-error text-xs font-bold px-3 py-1.5 hover:bg-error/5 rounded-lg transition-colors">Remove</button>
+</div>
+</div>
+<!-- Slot Item: Available -->
+<div class="bg-surface-container-lowest rounded-xl p-4 flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<div class="flex gap-3">
+<div class="w-10 h-10 bg-tertiary-container/10 rounded-lg flex items-center justify-center text-on-tertiary-container">
+<span class="material-symbols-outlined" data-icon="diamond">diamond</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-bold text-lg text-primary">V-002</span>
+<span class="px-2 py-0.5 bg-tertiary-fixed text-on-tertiary-fixed text-[10px] font-bold rounded-full uppercase">Available</span>
+</div>
+<p class="text-xs text-outline font-medium">VIP Lounge • 25sqm</p>
+</div>
+</div>
+<button class="p-2 hover:bg-surface-container-low rounded-full transition-colors">
+<span class="material-symbols-outlined text-outline" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+<div class="flex gap-2">
+<button class="flex-1 bg-primary text-white py-2.5 rounded-xl text-xs font-bold flex items-center justify-center gap-2 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[18px]" data-icon="person_add">person_add</span>
+                            Assign Vendor
+                        </button>
+<button class="px-4 bg-surface-container-high text-on-surface py-2.5 rounded-xl text-xs font-bold active:scale-95 transition-all">
+                            Edit Slot
+                        </button>
+</div>
+</div>
+<!-- Slot Item: Occupied 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-4 flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<div class="flex gap-3">
+<div class="w-10 h-10 bg-secondary-container/10 rounded-lg flex items-center justify-center text-secondary-container">
+<span class="material-symbols-outlined" data-icon="chair">chair</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-bold text-lg text-primary">S-142</span>
+<span class="px-2 py-0.5 bg-error-container text-on-error-container text-[10px] font-bold rounded-full uppercase">Occupied</span>
+</div>
+<p class="text-xs text-outline font-medium">Standard Seat • Row 4</p>
+</div>
+</div>
+<button class="p-2 hover:bg-surface-container-low rounded-full transition-colors">
+<span class="material-symbols-outlined text-outline" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+<div class="bg-surface-container-low rounded-lg p-3 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary-container text-white flex items-center justify-center text-[10px] font-bold">JD</div>
+<div>
+<p class="text-[10px] uppercase font-bold text-outline tracking-wider">Assigned Visitor</p>
+<p class="text-sm font-bold text-on-surface">John Doe</p>
+</div>
+</div>
+<button class="text-primary text-xs font-bold px-3 py-1.5 hover:bg-primary/5 rounded-lg transition-colors">Ticket Info</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Floating Action Button -->
+<button class="fixed bottom-28 right-6 w-14 h-14 bg-gradient-to-br from-primary to-primary-container text-white rounded-full shadow-lg flex items-center justify-center active:scale-90 transition-transform z-40">
+<span class="material-symbols-outlined text-[32px]" data-icon="add">add</span>
+</button>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-white/90 dark:bg-slate-900/90 backdrop-blur-lg rounded-t-[24px] shadow-[0_-4px_20px_rgba(0,0,0,0.06)] border-none">
+<a class="flex flex-col items-center justify-center text-slate-400 py-2 hover:text-[#1e3a8a] dark:hover:text-white transition-all active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="text-[10px] uppercase font-bold tracking-[0.05em]">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 py-2 hover:text-[#1e3a8a] dark:hover:text-white transition-all active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="event_seat">event_seat</span>
+<span class="text-[10px] uppercase font-bold tracking-[0.05em]">Events</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#1e3a8a] text-white rounded-[24px] px-5 py-2 active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="location_on" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<span class="text-[10px] uppercase font-bold tracking-[0.05em]">Venues</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 py-2 hover:text-[#1e3a8a] dark:hover:text-white transition-all active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="text-[10px] uppercase font-bold tracking-[0.05em]">Settings</span>
+</a>
+</nav>
+</body></html>

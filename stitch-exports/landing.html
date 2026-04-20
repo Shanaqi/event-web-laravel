@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Luxe Venue - Premium Event Management</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-tint": "#4059aa",
+                    "inverse-on-surface": "#eff1f3",
+                    "inverse-surface": "#2d3133",
+                    "on-primary-fixed": "#00164e",
+                    "tertiary-container": "#004752",
+                    "on-tertiary-fixed-variant": "#004e5a",
+                    "on-primary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "background": "#f7f9fb",
+                    "outline": "#757682",
+                    "on-primary-fixed-variant": "#264191",
+                    "surface-variant": "#e0e3e5",
+                    "on-surface": "#191c1e",
+                    "on-secondary-fixed-variant": "#5a00c6",
+                    "surface-dim": "#d8dadc",
+                    "surface-container-low": "#f2f4f6",
+                    "secondary": "#712ae2",
+                    "primary-container": "#1e3a8a",
+                    "surface": "#f7f9fb",
+                    "on-tertiary-container": "#00bdd6",
+                    "on-background": "#191c1e",
+                    "surface-container-high": "#e6e8ea",
+                    "on-tertiary-fixed": "#001f25",
+                    "tertiary": "#002f37",
+                    "surface-bright": "#f7f9fb",
+                    "primary": "#00236f",
+                    "outline-variant": "#c5c5d3",
+                    "surface-container": "#eceef0",
+                    "on-surface-variant": "#444651",
+                    "secondary-container": "#8a4cfc",
+                    "tertiary-fixed": "#a2eeff",
+                    "on-error": "#ffffff",
+                    "secondary-fixed": "#eaddff",
+                    "inverse-primary": "#b6c4ff",
+                    "on-tertiary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "on-secondary-container": "#fffbff",
+                    "tertiary-fixed-dim": "#2fd9f4",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-fixed-dim": "#d2bbff",
+                    "on-secondary": "#ffffff",
+                    "surface-container-highest": "#e0e3e5",
+                    "primary-fixed": "#dce1ff",
+                    "on-secondary-fixed": "#25005a",
+                    "primary-fixed-dim": "#b6c4ff",
+                    "on-primary-container": "#90a8ff",
+                    "error-container": "#ffdad6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "1rem",
+                    "xl": "1.5rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Inter", "sans-serif"],
+                    "body": ["Inter", "sans-serif"],
+                    "label": ["Inter", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface selection:bg-primary/20">
+<!-- TopAppBar -->
+<header class="bg-surface/80 backdrop-blur-xl docked full-width top-0 sticky z-50 shadow-sm flex items-center justify-between px-6 py-4 w-full">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="location_on">location_on</span>
+<h1 class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-[#00236f] to-[#1e3a8a]">Luxe Venue</h1>
+</div>
+<div class="active:scale-95 transition-transform hover:bg-surface_container_high/50 p-2 rounded-full">
+<span class="material-symbols-outlined text-primary" data-icon="account_circle">account_circle</span>
+</div>
+</header>
+<main class="pb-24">
+<!-- Hero Section -->
+<section class="relative px-6 pt-12 pb-20 overflow-hidden">
+<div class="absolute top-0 right-0 -z-10 w-64 h-64 bg-secondary/10 rounded-full blur-3xl opacity-50 translate-x-1/2 -translate-y-1/2"></div>
+<div class="max-w-md mx-auto text-center md:text-left md:max-w-4xl md:grid md:grid-cols-2 md:items-center md:gap-12">
+<div>
+<span class="inline-block px-3 py-1 mb-6 text-xs font-bold tracking-widest uppercase rounded-full bg-secondary-container text-on-secondary-container">The Digital Concierge</span>
+<h2 class="text-4xl md:text-6xl font-extrabold tracking-tight text-on-surface mb-6 leading-[1.1]">
+                        Host Unforgettable Events
+                    </h2>
+<p class="text-lg text-on-surface-variant font-medium mb-10 leading-relaxed">
+                        Book premium venues and manage your layout in one place. Curated spaces for high-performance outcomes.
+                    </p>
+<button class="w-full md:w-auto px-8 py-4 bg-gradient-to-br from-primary to-primary-container text-on-primary rounded-xl font-bold text-lg shadow-xl active:scale-95 transition-all">
+                        Browse Venues
+                    </button>
+</div>
+<div class="hidden md:block">
+<div class="aspect-square rounded-xl bg-surface-container-high overflow-hidden shadow-2xl">
+<img alt="Luxury event space" class="w-full h-full object-cover" data-alt="modern luxury event space with high ceilings floor to ceiling windows elegant minimal furniture and soft warm ambient lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2rJirZmbHaazSspfAXfhqvoEcVAL3jPy-Ro3PQZVEySaJrNDtrf-01pVrju2uiL8D2alKxd3Zvno9Ngjaj7-CY5SXRIszO4Rxkktg6AarqeXCeaOfzLk6svA5XmQv9kl0Rqy400ufjLdp86EmDWhziOrtE2l-REV1Fu8K8fiTQ2BD4ONzaQ1Txyxw1L7hAGFCP-VSp8-afKhU6GcFtXgDM9ZUx4X7z_r-CuQcTe_hXTc2qU-ma2hBjWGkyYuC7V_YMCGpgTdfUhw"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Venues: Horizontal Scroll -->
+<section class="mb-16">
+<div class="px-6 mb-6 flex justify-between items-end">
+<div>
+<h3 class="text-xs font-bold uppercase tracking-widest text-secondary mb-1">Curation</h3>
+<h4 class="text-2xl font-bold">Featured Venues</h4>
+</div>
+<button class="text-primary font-bold text-sm">View all</button>
+</div>
+<div class="flex overflow-x-auto hide-scrollbar gap-6 px-6 snap-x snap-mandatory">
+<!-- Venue 1 -->
+<div class="min-w-[280px] snap-center group">
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+<div class="h-48 relative">
+<img alt="The Grand Atrium" class="w-full h-full object-cover" data-alt="expansive grand atrium with glass walls marble floors and architectural pillars in a futuristic shopping mall setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCzpIGvjhVxOhFfj_lNFEqfmRNgpfuCxpb8YoM7O8NWxHOvU2iv938h-gCnxXRdu7rTr8VtjFzUS2J_ksVRKyy3bI53LM0TL8ewuFCPE8FjEdTNhLb9sWnAvm58GcX_e3MX9ZLUT1eSzAYgFnsdRPHZYdP_5ybNUzLN48HMB9UOUY-KBslw_cYJLmwgBgKMRmchcX8pXSNUwqRAE4XGUjqC2yJGjGkDVs83LCCe_0rUHAkQH6VKzcZzaa070SBR3vn8jw1Kj2HPQ4"/>
+<div class="absolute top-3 right-3 px-3 py-1 bg-surface-container-lowest/80 backdrop-blur-md rounded-full text-[10px] font-bold uppercase tracking-tight">
+                                500 Capacity
+                            </div>
+</div>
+<div class="p-5">
+<h5 class="text-lg font-bold mb-1">The Grand Atrium</h5>
+<div class="flex items-center gap-1 text-on-surface-variant mb-4">
+<span class="material-symbols-outlined text-sm" data-icon="star">star</span>
+<span class="text-sm font-medium">4.9 · Premium Elite</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-primary font-bold">$1,200 <span class="text-xs text-on-surface-variant font-normal">/hour</span></span>
+<span class="material-symbols-outlined text-primary active:scale-75 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Venue 2 -->
+<div class="min-w-[280px] snap-center">
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm">
+<div class="h-48 relative">
+<img alt="Azure Lounge" class="w-full h-full object-cover" data-alt="sophisticated cocktail lounge with deep blue lighting velvet seating and a high-end luxury bar aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0ZZWiWno1HT5HLE1kBALtM4Zhl9wF8iEsRtFqfQKEanCSQ_COH3_l2dluiJCTyIcTimd0MzV_6y1BCwwqZpwyW_6GZ_H7Y-I_7cHRvA5NSOgGQBUkng-YOctZ071wj-kwfoftEBt6du5VbchuVDm7_oTgK4kYZUgxB4z4Xda61_bHefWBYAoUXR6CZVmt1rY1gYOO4WMi2WkmzOga2qOm6OZxUKlZK4Hk37yc7p9uE-KFZ3USRb83phXYJDVgInx04V2JY-fkw3g"/>
+<div class="absolute top-3 right-3 px-3 py-1 bg-surface-container-lowest/80 backdrop-blur-md rounded-full text-[10px] font-bold uppercase tracking-tight">
+                                120 Capacity
+                            </div>
+</div>
+<div class="p-5">
+<h5 class="text-lg font-bold mb-1">Azure Lounge</h5>
+<div class="flex items-center gap-1 text-on-surface-variant mb-4">
+<span class="material-symbols-outlined text-sm" data-icon="star">star</span>
+<span class="text-sm font-medium">4.8 · Intimate</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-primary font-bold">$450 <span class="text-xs text-on-surface-variant font-normal">/hour</span></span>
+<span class="material-symbols-outlined text-primary" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Venue 3 -->
+<div class="min-w-[280px] snap-center">
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm">
+<div class="h-48 relative">
+<img alt="Meeting Room 1" class="w-full h-full object-cover" data-alt="minimalist modern executive meeting room with high-tech equipment wood accents and natural window light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAD-TZzFIRguPeoiyKrLmNiNBnbxk8NuLaeUgEVCb9LR0-mfebwjfQci6zLCG2JJCk4y0YkxUi1tLxzXUCSCcoqTPDgAj1LZRq2unnFx2owwTa0w7Wf279FtMtonKEglMbiAhsX5t1qVyw0Kig27_iIlfQrB8rHUTksVvTQP2NWPF3o7ttln8hUlU49q49V16A74SbdFxru7nPj3CQ8Kp5d7RUKYOshb8IoY2iHi3no06jf3FdwicCRnEjNQLvOf4Jfv8vw7sPlRlM"/>
+<div class="absolute top-3 right-3 px-3 py-1 bg-surface-container-lowest/80 backdrop-blur-md rounded-full text-[10px] font-bold uppercase tracking-tight">
+                                25 Capacity
+                            </div>
+</div>
+<div class="p-5">
+<h5 class="text-lg font-bold mb-1">Meeting Room 1</h5>
+<div class="flex items-center gap-1 text-on-surface-variant mb-4">
+<span class="material-symbols-outlined text-sm" data-icon="star">star</span>
+<span class="text-sm font-medium">4.7 · Corporate</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-primary font-bold">$180 <span class="text-xs text-on-surface-variant font-normal">/hour</span></span>
+<span class="material-symbols-outlined text-primary" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Benefits Section: Asymmetric Bento Grid -->
+<section class="px-6 mb-16">
+<h4 class="text-2xl font-bold mb-8">Why Luxe Venue?</h4>
+<div class="grid grid-cols-6 gap-4">
+<!-- Benefit 1 -->
+<div class="col-span-6 bg-surface-container-low p-6 rounded-xl border-none">
+<div class="flex gap-4 items-start">
+<div class="p-3 bg-primary-fixed-dim rounded-lg">
+<span class="material-symbols-outlined text-primary" data-icon="architecture">architecture</span>
+</div>
+<div>
+<h6 class="text-lg font-bold mb-2">Smart Layout Tools</h6>
+<p class="text-on-surface-variant text-sm leading-relaxed">Drag-and-drop seating charts and stage designs. Visualize your event before you arrive.</p>
+</div>
+</div>
+</div>
+<!-- Benefit 2 -->
+<div class="col-span-3 bg-tertiary-container text-on-tertiary-container p-6 rounded-xl flex flex-col justify-between aspect-square">
+<span class="material-symbols-outlined text-tertiary-fixed-dim" data-icon="speed">speed</span>
+<div>
+<h6 class="text-sm font-bold uppercase tracking-wider mb-1">Live Sync</h6>
+<p class="text-xs opacity-90">Real-time availability.</p>
+</div>
+</div>
+<!-- Benefit 3 -->
+<div class="col-span-3 bg-secondary-fixed text-on-secondary-fixed p-6 rounded-xl flex flex-col justify-between aspect-square">
+<span class="material-symbols-outlined text-secondary" data-icon="support_agent">support_agent</span>
+<div>
+<h6 class="text-sm font-bold uppercase tracking-wider mb-1">Concierge</h6>
+<p class="text-xs opacity-90">Dedicated event support.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Counter Section (Extra Branding) -->
+<section class="px-6 mb-16">
+<div class="bg-primary-container text-on-primary-container p-8 rounded-xl relative overflow-hidden">
+<div class="absolute -right-4 -bottom-4 opacity-10">
+<span class="material-symbols-outlined text-[120px]" data-icon="event_note">event_note</span>
+</div>
+<div class="relative z-10 flex flex-col gap-6">
+<div>
+<div class="text-4xl font-bold mb-1">12k+</div>
+<div class="text-xs font-bold uppercase tracking-widest text-on-primary-container/70">Events Hosted</div>
+</div>
+<div>
+<div class="text-4xl font-bold mb-1">4.9</div>
+<div class="text-xs font-bold uppercase tracking-widest text-on-primary-container/70">Satisfaction Rate</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Simple Footer -->
+<footer class="px-6 py-12 border-t border-outline-variant/10">
+<div class="mb-8">
+<h1 class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-primary to-primary-container mb-2">Luxe Venue</h1>
+<p class="text-on-surface-variant text-sm">Elevating event management for the modern enterprise.</p>
+</div>
+<div class="grid grid-cols-2 gap-8 mb-12">
+<div class="flex flex-col gap-3">
+<span class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-2">Company</span>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Support</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Careers</a>
+</div>
+<div class="flex flex-col gap-3">
+<span class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-2">Legal</span>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Terms</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Privacy</a>
+</div>
+</div>
+<div class="text-[10px] text-outline uppercase tracking-widest">
+                © 2024 Luxe Venue Platform. All rights reserved.
+            </div>
+</footer>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-surface shadow-[0_-8px_30px_rgb(0,0,0,0.04)] z-50 rounded-t-3xl border-none">
+<div class="flex flex-col items-center justify-center bg-primary/10 text-primary rounded-2xl px-5 py-2 active:translate-y-0.5 transition-all">
+<span class="material-symbols-outlined mb-1" data-icon="explore" style="font-variation-settings: 'FILL' 1;">explore</span>
+<span class="font-medium text-[10px] uppercase tracking-wider">Explore</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 px-5 py-2 hover:text-primary active:translate-y-0.5 transition-all">
+<span class="material-symbols-outlined mb-1" data-icon="event_available">event_available</span>
+<span class="font-medium text-[10px] uppercase tracking-wider">Bookings</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 px-5 py-2 hover:text-primary active:translate-y-0.5 transition-all">
+<span class="material-symbols-outlined mb-1" data-icon="bookmark">bookmark</span>
+<span class="font-medium text-[10px] uppercase tracking-wider">Saved</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 px-5 py-2 hover:text-primary active:translate-y-0.5 transition-all">
+<span class="material-symbols-outlined mb-1" data-icon="chat_bubble">chat_bubble</span>
+<span class="font-medium text-[10px] uppercase tracking-wider">Inbox</span>
+</div>
+</nav>
+</body></html>

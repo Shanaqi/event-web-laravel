@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MallConnect - Event Venues</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-container": "#1e3a8a",
+                    "surface": "#f7f9fb",
+                    "on-tertiary-container": "#00bdd6",
+                    "on-background": "#191c1e",
+                    "surface-dim": "#d8dadc",
+                    "surface-container-low": "#f2f4f6",
+                    "secondary": "#712ae2",
+                    "surface-variant": "#e0e3e5",
+                    "on-surface": "#191c1e",
+                    "on-secondary-fixed-variant": "#5a00c6",
+                    "outline": "#757682",
+                    "on-primary-fixed-variant": "#264191",
+                    "tertiary-container": "#004752",
+                    "on-tertiary-fixed-variant": "#004e5a",
+                    "error": "#ba1a1a",
+                    "background": "#f7f9fb",
+                    "on-primary": "#ffffff",
+                    "on-primary-fixed": "#00164e",
+                    "inverse-on-surface": "#eff1f3",
+                    "surface-tint": "#4059aa",
+                    "inverse-surface": "#2d3133",
+                    "on-primary-container": "#90a8ff",
+                    "error-container": "#ffdad6",
+                    "on-secondary-fixed": "#25005a",
+                    "primary-fixed-dim": "#b6c4ff",
+                    "surface-container-highest": "#e0e3e5",
+                    "on-secondary": "#ffffff",
+                    "primary-fixed": "#dce1ff",
+                    "on-secondary-container": "#fffbff",
+                    "on-error-container": "#93000a",
+                    "tertiary-fixed-dim": "#2fd9f4",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-fixed-dim": "#d2bbff",
+                    "secondary-fixed": "#eaddff",
+                    "inverse-primary": "#b6c4ff",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-fixed": "#a2eeff",
+                    "on-error": "#ffffff",
+                    "surface-container": "#eceef0",
+                    "on-surface-variant": "#444651",
+                    "secondary-container": "#8a4cfc",
+                    "surface-container-high": "#e6e8ea",
+                    "on-tertiary-fixed": "#001f25",
+                    "primary": "#00236f",
+                    "outline-variant": "#c5c5d3",
+                    "tertiary": "#002f37",
+                    "surface-bright": "#f7f9fb"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "1rem",
+                    "xl": "1.5rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Inter", "sans-serif"],
+                    "body": ["Inter", "sans-serif"],
+                    "label": ["Inter", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface antialiased overflow-x-hidden pb-24">
+<!-- Top Navigation Anchor (As per JSON Structure) -->
+<header class="fixed top-0 w-full z-50 bg-slate-50/80 backdrop-blur-xl shadow-sm flex justify-between items-center px-6 h-16">
+<div class="flex items-center gap-3">
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-slate-200/50 transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-indigo-900" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="text-indigo-900 font-bold text-lg tracking-tight font-headline">Event Venues</h1>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-slate-200/50 transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-indigo-900" data-icon="search">search</span>
+</button>
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-slate-200/50 transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-indigo-900" data-icon="notifications">notifications</span>
+</button>
+</div>
+</header>
+<main class="pt-20 px-6 max-w-2xl mx-auto">
+<!-- Horizontal Scroll Filters -->
+<section class="mt-4 -mx-6">
+<div class="flex overflow-x-auto no-scrollbar gap-3 px-6 py-2">
+<button class="whitespace-nowrap px-6 py-2.5 bg-primary text-on-primary rounded-full text-sm font-semibold tracking-wide shadow-lg shadow-indigo-200/50">All</button>
+<button class="whitespace-nowrap px-6 py-2.5 bg-surface-container-high text-on-surface-variant rounded-full text-sm font-medium hover:bg-surface-container-highest transition-colors">Grand Hall</button>
+<button class="whitespace-nowrap px-6 py-2.5 bg-surface-container-high text-on-surface-variant rounded-full text-sm font-medium hover:bg-surface-container-highest transition-colors">Meeting Room</button>
+<button class="whitespace-nowrap px-6 py-2.5 bg-surface-container-high text-on-surface-variant rounded-full text-sm font-medium hover:bg-surface-container-highest transition-colors">Roof Terrace</button>
+<button class="whitespace-nowrap px-6 py-2.5 bg-surface-container-high text-on-surface-variant rounded-full text-sm font-medium hover:bg-surface-container-highest transition-colors">Boutique Space</button>
+</div>
+</section>
+<!-- Search Summary -->
+<div class="mt-8 flex justify-between items-baseline">
+<h2 class="text-xs uppercase tracking-[0.15em] font-bold text-outline">Available Venues (12)</h2>
+<button class="flex items-center gap-1 text-xs font-semibold text-secondary">
+<span class="material-symbols-outlined text-[16px]" data-icon="filter_list">filter_list</span>
+                Refine
+            </button>
+</div>
+<!-- Venue Listing Grid (Vertical) -->
+<section class="mt-6 space-y-8">
+<!-- Venue Card 1 -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] transition-all hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] hover:-translate-y-1">
+<div class="relative h-64 w-full overflow-hidden">
+<img alt="The Grand Atrium" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="luxury grand atrium event space with massive glass ceilings, modern white pillars, and expansive polished marble flooring in bright daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1iqh6S5LTA_MDCx6MtDayfexS3QTpSWXXymQwvUAwefkoLZGMlaB9-7Z8y8dchCxCtlNsktERruWoitKSl165S5EbPR-BIKj1jzCv9i9ae3zr5S6J4Oy0jXwkuGI5gkafsTtiCIE7gdcXsDZPmMgxDmovlB6JUf1AiYziqF10ni07dgCGYgM4v4MBWA-boovIDH0vveW3aifgyHoPinXUoQO9fkJW5vu5JbTaPpSbIj9O01WEHa2bB1fOPd9e_hpnRdIlz4oqvNY"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1.5 rounded-full shadow-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[18px]" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-bold text-on-surface">4.9</span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-xl font-bold text-primary tracking-tight">The Grand Atrium</h3>
+<p class="text-sm text-on-surface-variant flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[16px] text-outline" data-icon="location_on">location_on</span>
+                                Level 5, North Wing
+                            </p>
+</div>
+<div class="text-right">
+<span class="text-[10px] uppercase tracking-widest font-extrabold text-outline block">Premium</span>
+</div>
+</div>
+<div class="mt-6 flex items-center justify-between p-4 bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-fixed-dim flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="groups">groups</span>
+</div>
+<div>
+<p class="text-[10px] text-outline font-bold uppercase tracking-tighter">Capacity</p>
+<p class="text-sm font-bold text-on-surface">500 pax</p>
+</div>
+</div>
+<button class="bg-surface-container-lowest text-on-surface px-5 py-2.5 rounded-lg text-sm font-bold border border-outline-variant/30 hover:bg-surface-bright transition-colors">
+                            View Details
+                        </button>
+</div>
+</div>
+</div>
+<!-- Venue Card 2 -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] transition-all hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] hover:-translate-y-1">
+<div class="relative h-64 w-full overflow-hidden">
+<img alt="Azure Lounge" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="ultra modern minimalist cocktail lounge with floor to ceiling windows, blue ambient lighting, and sleek velvet seating overlooking city lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBce9WNGk38t-CCXIpH1yILdikJWyfeaxDj2Rkn-iGTwz-83ndb3lBFoAMvczN-ZV4apuBD7_9dRT5NneWZ_JBGL-bW8JljTUkGuuEG5jK0J0WhaeGn2y0XKFDzOy6-jF1Bt0SYtC9-vCcE4YduyCLPPVPbU6UkdGIHvR6I937zQBOLON3YZj2sdLhezTc_vZaZMAubc7J2xbpyPcxvYVHPU9j7s8vQIBP5Irg2XfVn2ppuILZYf7qahCOnTJ8iLP0b05tYHgQtab8"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1.5 rounded-full shadow-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[18px]" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-bold text-on-surface">4.7</span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-xl font-bold text-primary tracking-tight">Azure Lounge</h3>
+<p class="text-sm text-on-surface-variant flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[16px] text-outline" data-icon="location_on">location_on</span>
+                                Level 8, Sky Deck
+                            </p>
+</div>
+</div>
+<div class="mt-6 flex items-center justify-between p-4 bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-fixed-dim flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="groups">groups</span>
+</div>
+<div>
+<p class="text-[10px] text-outline font-bold uppercase tracking-tighter">Capacity</p>
+<p class="text-sm font-bold text-on-surface">120 pax</p>
+</div>
+</div>
+<button class="bg-surface-container-lowest text-on-surface px-5 py-2.5 rounded-lg text-sm font-bold border border-outline-variant/30 hover:bg-surface-bright transition-colors">
+                            View Details
+                        </button>
+</div>
+</div>
+</div>
+<!-- Venue Card 3 -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] transition-all hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] hover:-translate-y-1">
+<div class="relative h-64 w-full overflow-hidden">
+<img alt="The boardroom" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="professional corporate boardroom with a long dark oak table, ergonomic chairs, and high-tech conference screens in a bright office environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuSpEjg1BoTFJlZZO1W6OWXroXZlXxW-KQboEL0uTKARlqBaTg6ktee1Ec1hzBCurwxUyaOOV98m9YaGTrtmSX3FeBacDf-VkJOpUfU9XpZ6x0Gg95tRCefNm5jnDd4B28SUX9jd99M1bH-52AJJW9b-qvwmaNVDVYJhYinpEjUwoi877_fM-QEmLgT4DIjXgNYomTFgAJMOTJOBu9Z1yoXsnwIcRxCbrYb1YToPim57gnrR2OSNUXxABnre1-5C5Rey2Lga6Y-MI"/>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-xl font-bold text-primary tracking-tight">The Boardroom</h3>
+<p class="text-sm text-on-surface-variant flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[16px] text-outline" data-icon="location_on">location_on</span>
+                                Level 2, Corporate Hub
+                            </p>
+</div>
+</div>
+<div class="mt-6 flex items-center justify-between p-4 bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-fixed-dim flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="groups">groups</span>
+</div>
+<div>
+<p class="text-[10px] text-outline font-bold uppercase tracking-tighter">Capacity</p>
+<p class="text-sm font-bold text-on-surface">25 pax</p>
+</div>
+</div>
+<button class="bg-surface-container-lowest text-on-surface px-5 py-2.5 rounded-lg text-sm font-bold border border-outline-variant/30 hover:bg-surface-bright transition-colors">
+                            View Details
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Shell (As per JSON Structure) -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-white/90 dark:bg-slate-950/90 backdrop-blur-2xl border-t border-slate-100/50 z-50 shadow-[0_-4px_20px_rgba(0,0,0,0.05)] rounded-t-[24px]">
+<a class="flex flex-col items-center justify-center text-slate-400 px-3 py-1.5 hover:text-indigo-600 transition-transform active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-['Inter'] text-[10px] font-medium uppercase tracking-wider mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-indigo-50 text-indigo-700 rounded-2xl px-3 py-1.5 transition-transform active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="map">map</span>
+<span class="font-['Inter'] text-[10px] font-medium uppercase tracking-wider mt-1">Directory</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 px-3 py-1.5 hover:text-indigo-600 transition-transform active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="local_offer">local_offer</span>
+<span class="font-['Inter'] text-[10px] font-medium uppercase tracking-wider mt-1">Promos</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 px-3 py-1.5 hover:text-indigo-600 transition-transform active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="local_parking">local_parking</span>
+<span class="font-['Inter'] text-[10px] font-medium uppercase tracking-wider mt-1">Parking</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 px-3 py-1.5 hover:text-indigo-600 transition-transform active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Inter'] text-[10px] font-medium uppercase tracking-wider mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

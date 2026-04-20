@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>MallConnect Booking Management</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-container": "#90a8ff",
+                        "on-primary": "#ffffff",
+                        "surface-container-low": "#f2f4f6",
+                        "secondary-container": "#8a4cfc",
+                        "surface-variant": "#e0e3e5",
+                        "on-secondary": "#ffffff",
+                        "tertiary-container": "#004752",
+                        "on-tertiary-fixed": "#001f25",
+                        "surface-tint": "#4059aa",
+                        "surface-bright": "#f7f9fb",
+                        "on-error-container": "#93000a",
+                        "surface": "#f7f9fb",
+                        "inverse-surface": "#2d3133",
+                        "background": "#f7f9fb",
+                        "surface-dim": "#d8dadc",
+                        "primary-container": "#1e3a8a",
+                        "error-container": "#ffdad6",
+                        "on-secondary-container": "#fffbff",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#eaddff",
+                        "outline": "#757682",
+                        "secondary-fixed-dim": "#d2bbff",
+                        "secondary": "#712ae2",
+                        "primary": "#00236f",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed-dim": "#b6c4ff",
+                        "on-primary-fixed": "#00164e",
+                        "tertiary-fixed-dim": "#2fd9f4",
+                        "inverse-on-surface": "#eff1f3",
+                        "inverse-primary": "#b6c4ff",
+                        "on-secondary-fixed-variant": "#5a00c6",
+                        "on-tertiary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-background": "#191c1e",
+                        "on-tertiary-container": "#00bdd6",
+                        "on-surface-variant": "#444651",
+                        "surface-container": "#eceef0",
+                        "tertiary": "#002f37",
+                        "outline-variant": "#c5c5d3",
+                        "surface-container-high": "#e6e8ea",
+                        "primary-fixed": "#dce1ff",
+                        "on-secondary-fixed": "#25005a",
+                        "on-primary-fixed-variant": "#264191",
+                        "tertiary-fixed": "#a2eeff",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-tertiary-fixed-variant": "#004e5a",
+                        "on-surface": "#191c1e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "16px",
+                        "xl": "24px",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; -webkit-tap-highlight-color: transparent; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-effect { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+        ::-webkit-scrollbar { display: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface">
+<!-- Top Navigation Shell -->
+<nav class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 py-4 bg-[#f7f9fb]/80 backdrop-blur-xl shadow-[0_0_40px_0_rgba(25,28,30,0.06)]">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#1e3a8a]">search</span>
+<span class="text-lg font-bold tracking-tighter uppercase text-[#1e3a8a]">Concierge Admin</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="p-2 rounded-full hover:bg-[#f2f4f6] active:scale-95 transition-all duration-300">
+<span class="material-symbols-outlined text-[#1e3a8a]">notifications</span>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="pt-24 pb-32 px-6 min-h-screen max-w-lg mx-auto">
+<!-- Header & Search -->
+<header class="mb-8">
+<h1 class="text-3xl font-extrabold tracking-tight text-on-surface mb-6 leading-tight">Booking Requests</h1>
+<div class="relative mb-6">
+<div class="absolute inset-y-0 left-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-outline text-xl">search</span>
+</div>
+<input class="w-full h-14 pl-12 pr-4 bg-surface-container-high border-none rounded-xl text-on-surface focus:ring-2 focus:ring-primary/40 transition-all placeholder:text-outline-variant font-medium" placeholder="Search ID or Customer" type="text"/>
+</div>
+<!-- Filter Chips - Editorial Style -->
+<div class="flex gap-2 overflow-x-auto no-scrollbar pb-2">
+<button class="px-6 py-2.5 rounded-full bg-primary text-on-primary font-bold text-xs uppercase tracking-widest shadow-lg shadow-indigo-500/20 active:scale-95 transition-transform shrink-0">All</button>
+<button class="px-6 py-2.5 rounded-full bg-surface-container-lowest border border-outline-variant/15 text-on-surface-variant font-bold text-xs uppercase tracking-widest hover:bg-surface-bright active:scale-95 transition-transform shrink-0">Pending</button>
+<button class="px-6 py-2.5 rounded-full bg-surface-container-lowest border border-outline-variant/15 text-on-surface-variant font-bold text-xs uppercase tracking-widest hover:bg-surface-bright active:scale-95 transition-transform shrink-0">Approved</button>
+</div>
+</header>
+<!-- Booking List -->
+<div class="space-y-6">
+<!-- Booking Card 1: Pending -->
+<article class="bg-surface-container-lowest rounded-xl p-6 shadow-[0_4px_20px_rgba(0,0,0,0.02)] border border-outline-variant/10 relative overflow-hidden group">
+<div class="flex justify-between items-start mb-4">
+<div>
+<span class="block text-[10px] font-extrabold text-outline uppercase tracking-widest mb-1">#BK-8821</span>
+<h3 class="text-xl font-bold text-on-surface tracking-tight">Sarah Jenkins</h3>
+</div>
+<span class="px-3 py-1 bg-amber-100 text-amber-700 rounded-lg text-[10px] font-bold uppercase tracking-wider">Pending</span>
+</div>
+<div class="grid grid-cols-2 gap-4 mb-6">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-primary-fixed-dim/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-lg">meeting_room</span>
+</div>
+<span class="text-sm font-semibold text-on-surface-variant">Grand Atrium</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-primary-fixed-dim/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-lg">calendar_today</span>
+</div>
+<span class="text-sm font-semibold text-on-surface-variant">Oct 24, 2024</span>
+</div>
+</div>
+<div class="flex items-center gap-2 mb-6 p-3 bg-surface-container-low rounded-lg">
+<span class="material-symbols-outlined text-outline text-lg">schedule</span>
+<span class="text-xs font-bold text-on-surface">09:00 AM - 01:00 PM</span>
+</div>
+<div class="flex items-center gap-3">
+<button class="flex-1 h-12 bg-gradient-to-br from-[#00236f] to-[#1e3a8a] text-on-primary rounded-xl font-bold text-sm tracking-wide shadow-md active:scale-95 transition-all">Approve</button>
+<button class="flex-1 h-12 bg-surface-container-high text-on-surface-variant rounded-xl font-bold text-sm tracking-wide active:scale-95 transition-all">Reject</button>
+<button class="w-12 h-12 flex items-center justify-center rounded-xl bg-secondary-fixed text-on-secondary-fixed active:scale-95 transition-all">
+<span class="material-symbols-outlined">visibility</span>
+</button>
+</div>
+</article>
+<!-- Booking Card 2: Approved -->
+<article class="bg-surface-container-lowest rounded-xl p-6 shadow-[0_4px_20px_rgba(0,0,0,0.02)] border border-outline-variant/10 relative overflow-hidden">
+<div class="flex justify-between items-start mb-4">
+<div>
+<span class="block text-[10px] font-extrabold text-outline uppercase tracking-widest mb-1">#BK-8822</span>
+<h3 class="text-xl font-bold text-on-surface tracking-tight">Marcus Thorne</h3>
+</div>
+<span class="px-3 py-1 bg-green-100 text-green-700 rounded-lg text-[10px] font-bold uppercase tracking-wider">Approved</span>
+</div>
+<div class="grid grid-cols-2 gap-4 mb-6">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-primary-fixed-dim/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-lg">storefront</span>
+</div>
+<span class="text-sm font-semibold text-on-surface-variant">North Wing</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-primary-fixed-dim/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-lg">calendar_today</span>
+</div>
+<span class="text-sm font-semibold text-on-surface-variant">Oct 25, 2024</span>
+</div>
+</div>
+<div class="flex items-center gap-2 mb-6 p-3 bg-surface-container-low rounded-lg">
+<span class="material-symbols-outlined text-outline text-lg">schedule</span>
+<span class="text-xs font-bold text-on-surface">02:00 PM - 06:00 PM</span>
+</div>
+<div class="flex items-center gap-3">
+<button class="flex-[2] h-12 border border-outline-variant/30 text-on-surface-variant rounded-xl font-bold text-sm tracking-wide flex items-center justify-center gap-2 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-sm">print</span> Manage Print
+                    </button>
+<button class="flex-1 h-12 bg-secondary-fixed text-on-secondary-fixed rounded-xl font-bold text-sm tracking-wide active:scale-95 transition-all">Details</button>
+</div>
+</article>
+<!-- Booking Card 3: Rejected -->
+<article class="bg-surface-container-lowest rounded-xl p-6 shadow-[0_4px_20px_rgba(0,0,0,0.02)] border border-outline-variant/10 relative overflow-hidden opacity-80">
+<div class="flex justify-between items-start mb-4">
+<div>
+<span class="block text-[10px] font-extrabold text-outline uppercase tracking-widest mb-1">#BK-8790</span>
+<h3 class="text-xl font-bold text-on-surface tracking-tight">Elena Rossi</h3>
+</div>
+<span class="px-3 py-1 bg-red-100 text-red-700 rounded-lg text-[10px] font-bold uppercase tracking-wider">Rejected</span>
+</div>
+<div class="grid grid-cols-2 gap-4 mb-6">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-outline text-lg">festival</span>
+</div>
+<span class="text-sm font-semibold text-on-surface-variant">Event Plaza</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-outline text-lg">calendar_today</span>
+</div>
+<span class="text-sm font-semibold text-on-surface-variant">Oct 26, 2024</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<button class="flex-1 h-12 bg-surface-container-high text-on-surface-variant rounded-xl font-bold text-sm tracking-wide active:scale-95 transition-all">Appeal Case</button>
+<button class="w-12 h-12 flex items-center justify-center rounded-xl bg-surface-container-low text-on-surface-variant active:scale-95 transition-all">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+</article>
+<!-- Visual Asset Card - Bento Style -->
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-primary p-6 rounded-xl relative overflow-hidden h-40 flex flex-col justify-end group">
+<img class="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-overlay group-hover:scale-110 transition-transform duration-700" data-alt="luxury shopping mall atrium with grand architecture and golden accent lighting in high-end photography style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALJVpzsnv6zhUWdW4jj1N4ZR4s-OHxvwUJp0mV6IRf5sCVPEndbsu_8MZ5p6Sub3Gnqh_pZcxreoYhrtbfgtoBAE3tSOKaeaKbp3G0HA1rMBlndqWviOqRCEQbWW4cQC6Ycj-YsjATrrO_Kknnv4YOjtvQAD0_vDRX9jeeb4OzyZl3AsHGqjOf_Z_7DduXplK1wW0yZQQLAiZBtqy0WFPtxXy5oS-tyr2eV6EBzQ-nBAbB-xNQ5ieIMYPi8REolXu0zBsWo1J5vZc"/>
+<h4 class="text-on-primary font-bold text-lg relative z-10">Venue<br/>Capacity</h4>
+<p class="text-primary-fixed-dim text-xs font-medium relative z-10">Live Analytics</p>
+</div>
+<div class="bg-secondary-container p-6 rounded-xl relative overflow-hidden h-40 flex flex-col justify-end group">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<img class="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-luminosity group-hover:scale-110 transition-transform duration-700" data-alt="professional workspace setting with sleek modern desks and digital displays in a premium business lounge" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCIsB8um3XFdJxSEd8CAmer7U_67r8aI_nAdePmtd2B6E4MlFRIR51Jb93IszwU5lb17Fb3EyKc3pyQn2i05lNoG-NELeBUVHFIpB62k4eooi5ow9h7Uc2gihhsZqL6WWTlqoZXAacAeyyBSTi7nHMIEgJaiv5A6E67HdTa_tmyF5gFTnRUQOuPzl9nq6oEN9yx9VUWIeEgB40iSHgiGFASxi6L2-o5XTTaLGgHfkArsb9SGH1YuYNX1Yv3Yl5oSs-darjAo-KFaU"/>
+<h4 class="text-on-secondary-container font-bold text-lg relative z-10">Tenant<br/>Logs</h4>
+<p class="text-secondary-fixed-dim text-xs font-medium relative z-10">24 New Updates</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Shell -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-safe pt-3 bg-[#f7f9fb] dark:bg-[#191c1e] rounded-t-[24px] shadow-[0_-10px_40px_0_rgba(0,0,0,0.04)]">
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-2.5 active:scale-90 transition-transform duration-200 hover:text-[#1e3a8a]" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-['Inter'] text-[10px] font-bold uppercase tracking-widest mt-1">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-gradient-to-br from-[#00236f] to-[#1e3a8a] text-white rounded-2xl px-5 py-2.5 shadow-lg shadow-indigo-500/20 active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">event_note</span>
+<span class="font-['Inter'] text-[10px] font-bold uppercase tracking-widest mt-1">Bookings</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-2.5 active:scale-90 transition-transform duration-200 hover:text-[#1e3a8a]" href="#">
+<span class="material-symbols-outlined">storefront</span>
+<span class="font-['Inter'] text-[10px] font-bold uppercase tracking-widest mt-1">Tenants</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-2.5 active:scale-90 transition-transform duration-200 hover:text-[#1e3a8a]" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-['Inter'] text-[10px] font-bold uppercase tracking-widest mt-1">Settings</span>
+</a>
+</nav>
+</body></html>

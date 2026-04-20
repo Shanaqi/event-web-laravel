@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MallConnect - Book Event</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-primary": "#b6c4ff",
+                        "error": "#ba1a1a",
+                        "outline": "#757682",
+                        "on-secondary-fixed": "#25005a",
+                        "tertiary": "#002f37",
+                        "on-secondary-container": "#fffbff",
+                        "surface-variant": "#e0e3e5",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-container": "#90a8ff",
+                        "surface-bright": "#f7f9fb",
+                        "secondary-fixed-dim": "#d2bbff",
+                        "inverse-surface": "#2d3133",
+                        "tertiary-fixed": "#a2eeff",
+                        "surface-container-low": "#f2f4f6",
+                        "on-error-container": "#93000a",
+                        "on-secondary": "#ffffff",
+                        "surface": "#f7f9fb",
+                        "surface-dim": "#d8dadc",
+                        "secondary-fixed": "#eaddff",
+                        "tertiary-fixed-dim": "#2fd9f4",
+                        "surface-container-high": "#e6e8ea",
+                        "on-tertiary-container": "#00bdd6",
+                        "on-surface-variant": "#444651",
+                        "surface-container": "#eceef0",
+                        "primary-fixed-dim": "#b6c4ff",
+                        "outline-variant": "#c5c5d3",
+                        "on-primary-fixed": "#00164e",
+                        "surface-container-highest": "#e0e3e5",
+                        "primary": "#00236f",
+                        "on-secondary-fixed-variant": "#5a00c6",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-tint": "#4059aa",
+                        "on-background": "#191c1e",
+                        "primary-fixed": "#dce1ff",
+                        "on-primary-fixed-variant": "#264191",
+                        "on-error": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "tertiary-container": "#004752",
+                        "on-surface": "#191c1e",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#004e5a",
+                        "on-tertiary-fixed": "#001f25",
+                        "inverse-on-surface": "#eff1f3",
+                        "secondary-container": "#8a4cfc",
+                        "secondary": "#712ae2",
+                        "primary-container": "#1e3a8a",
+                        "background": "#f7f9fb"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "16px",
+                        "xl": "24px",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #f7f9fb; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="text-on-surface antialiased">
+<!-- TopAppBar -->
+<nav class="fixed top-0 left-0 w-full z-50 bg-slate-50/80 backdrop-blur-xl flex items-center justify-between px-6 py-4">
+<div class="flex items-center gap-4">
+<button class="transition-all duration-300 ease-in-out active:scale-95 text-indigo-900">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="font-['Inter'] font-bold text-lg tracking-tight uppercase text-[0.05em] text-indigo-900">Book Event</h1>
+</div>
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-fixed">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="professional portrait of a young man with a friendly expression in high-key lighting for user profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjwbl_l_rq0L-6nuOfLC-dssXEBUzeJNsDhArU6GRVWvHb-fwjrC3sFKNqWjrxDsq2gtzMOznYIp81S5nukrTnrjt3IUeLe2-Kj6Ze60zVt27sbpriS1o5G2xwt98tSzpVmS1PT6BfQzoJ5ufRfnK20oU0LKL3V7i67-FcYqS-qJBobRbASPZO-pMYGn0o6B49nwAqCqf72SKrnNRJuL-HRQ2bYg0QhhnwZcuRH9N5KKFIES8yYYxR2Go14TjZr4IA9BB4ZmBNZ7I"/>
+</div>
+</nav>
+<main class="pt-24 pb-32 px-6 max-w-md mx-auto">
+<!-- Stepper Component -->
+<div class="flex items-center justify-between mb-10 px-2">
+<!-- Step 1: Date -->
+<div class="flex flex-col items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<span class="font-['Inter'] text-[10px] font-bold uppercase tracking-[0.1em] text-on-surface-variant">Date</span>
+</div>
+<div class="flex-1 h-[2px] mx-2 bg-secondary-container mb-6"></div>
+<!-- Step 2: Time -->
+<div class="flex flex-col items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<span class="font-['Inter'] text-[10px] font-bold uppercase tracking-[0.1em] text-on-surface-variant">Time</span>
+</div>
+<div class="flex-1 h-[2px] mx-2 bg-secondary-container mb-6"></div>
+<!-- Step 3: Details -->
+<div class="flex flex-col items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<span class="font-['Inter'] text-[10px] font-bold uppercase tracking-[0.1em] text-on-surface-variant">Details</span>
+</div>
+<div class="flex-1 h-[2px] mx-2 bg-secondary-container mb-6"></div>
+<!-- Step 4: Review (Active) -->
+<div class="flex flex-col items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center">
+<span class="text-xs font-bold">4</span>
+</div>
+<span class="font-['Inter'] text-[10px] font-bold uppercase tracking-[0.1em] text-primary">Review</span>
+</div>
+</div>
+<!-- Content Area -->
+<div class="space-y-8">
+<!-- Glassmorphism Summary Card -->
+<section class="bg-surface-container-lowest rounded-xl shadow-[0_4px_40px_rgba(0,0,0,0.06)] overflow-hidden">
+<div class="h-32 relative">
+<img class="w-full h-full object-cover" data-alt="modern minimalist grand atrium event space with high ceilings and natural light pouring through glass panels" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjpHUPMPvRseHT_3rtnMi0Z7CTZD2HWmMdEWwOUvza2Tu1GujDE-cXDqA_SkXJZ7PCxlkKhfa1-7c04rO3CM4PFqW9CFL3HLoYHzp1FAVSclRxMroNnhkGdvPnCa_xbEMcT70ZILVhtEVAzSxfw9vpeL_pZglUWZEhfQ8h745sYz3-w0n3p-4524LrgwJEhvX4C03ThUk5_I1U7sfmrj13tM8jnLN30oH1VKYw49W0Ez6K3c8t8WHRp9ZfEmxhxuK1Q0HdHSzc5tc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-4 left-6">
+<h2 class="text-white font-bold text-xl">Booking Summary</h2>
+</div>
+</div>
+<div class="p-6 space-y-4">
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-lg bg-primary-fixed-dim flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">event</span>
+</div>
+<div>
+<p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Event</p>
+<p class="font-semibold text-on-surface">Product Launch</p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary">calendar_today</span>
+<div>
+<p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Date</p>
+<p class="font-medium text-sm">Oct 24, 2024</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary">schedule</span>
+<div>
+<p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Time</p>
+<p class="font-medium text-sm">2:00 PM - 4:00 PM</p>
+</div>
+</div>
+</div>
+<div class="flex items-start gap-3 pt-2 border-t border-outline-variant/15">
+<span class="material-symbols-outlined text-secondary">location_on</span>
+<div>
+<p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Location</p>
+<p class="font-medium text-sm">Grand Atrium, Level 1</p>
+</div>
+</div>
+</div>
+</section>
+<!-- User Details Grid -->
+<section class="space-y-4">
+<h3 class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant px-2">Registrant Details</h3>
+<div class="grid grid-cols-1 gap-3">
+<!-- Detail Item -->
+<div class="bg-surface-container-low rounded-xl p-4 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant">person</span>
+<div>
+<p class="text-[10px] font-bold uppercase tracking-tight text-on-surface-variant/70">Full Name</p>
+<p class="font-medium text-on-surface">Julian Vance</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-emerald-500" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="bg-surface-container-low rounded-xl p-4 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant">call</span>
+<div>
+<p class="text-[10px] font-bold uppercase tracking-tight text-on-surface-variant/70">Phone</p>
+<p class="font-medium text-on-surface">+1 (555) 012-3456</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-emerald-500" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="bg-surface-container-low rounded-xl p-4 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant">category</span>
+<div>
+<p class="text-[10px] font-bold uppercase tracking-tight text-on-surface-variant/70">Event Type</p>
+<p class="font-medium text-on-surface">Corporate</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-emerald-500" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="bg-surface-container-low rounded-xl p-4">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-on-surface-variant mt-1">notes</span>
+<div>
+<p class="text-[10px] font-bold uppercase tracking-tight text-on-surface-variant/70">Notes</p>
+<p class="font-medium text-sm text-on-surface leading-relaxed mt-1">Need AV support for a 15-minute presentation. Requires HDMI connectivity.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Action Buttons -->
+<section class="space-y-3 pt-4">
+<button class="w-full py-4 bg-gradient-to-br from-primary to-primary-container text-white font-bold rounded-xl shadow-lg shadow-primary/20 transition-all duration-300 active:scale-95 flex items-center justify-center gap-2">
+                    Confirm Booking
+                    <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+<button class="w-full py-4 bg-transparent text-on-surface-variant font-semibold rounded-xl hover:bg-surface-container-high transition-all duration-300">
+                    Back to Details
+                </button>
+</section>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 bg-white flex justify-around items-center px-4 pb-6 pt-3 rounded-t-[24px] shadow-[0_-4px_40px_rgba(0,0,0,0.06)]">
+<div class="flex flex-col items-center text-slate-400 px-5 py-2">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="font-['Inter'] font-medium text-[10px] tracking-widest uppercase mt-1">Discover</span>
+</div>
+<div class="flex flex-col items-center bg-indigo-50 text-indigo-800 rounded-[16px] px-5 py-2">
+<span class="material-symbols-outlined" data-icon="calendar_today" style="font-variation-settings: 'FILL' 1;">calendar_today</span>
+<span class="font-['Inter'] font-medium text-[10px] tracking-widest uppercase mt-1">Events</span>
+</div>
+<div class="flex flex-col items-center text-slate-400 px-5 py-2">
+<span class="material-symbols-outlined" data-icon="support_agent">support_agent</span>
+<span class="font-['Inter'] font-medium text-[10px] tracking-widest uppercase mt-1">Concierge</span>
+</div>
+<div class="flex flex-col items-center text-slate-400 px-5 py-2">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Inter'] font-medium text-[10px] tracking-widest uppercase mt-1">Profile</span>
+</div>
+</nav>
+</body></html>
